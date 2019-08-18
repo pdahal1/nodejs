@@ -3,15 +3,15 @@ var path = require('path');
 var bodyParser = require('body-parser'); 
 
 var index = require('./routes/index'); 
-var tasks = require('./routes/task'); 
+var tasks = require('./routes/tasks'); 
 
 var app = express(); 
-var port = 8000; 
+var port = 3000; 
 
 //view engine
-app.set('views', path.join(__dirname, 'views')); 
-app.set('view engine', 'ejs'); 
-app.engine('html', require('ejs').renderFile); 
+//app.set('views', path.join(__dirname, 'views')); 
+//app.set('view engine', 'ejs'); 
+//app.engine('html', require('ejs').renderFile); 
 
 //set static folder
 app.use(express.static(path.join(__dirname, 'client'))); 
